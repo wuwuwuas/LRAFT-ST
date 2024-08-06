@@ -67,9 +67,9 @@ The following command shows an example for the 'PIV_4B' test case using a model 
 ```Shell
 python evaluate.py  --gpu 0 --arch LRAFT-ST --channel_threshold True --iters 12 --input_path_ckpt ./precomputed_ckpts/LRAFT-ST_KD_Lh_Ls_Lf-Dataset2/ckpt.tar --test 1 --test_dataset PIV_4B  --split_size 5 --offset 256
 ```
-This is an example result in the case of 'PIV_4B', from left to right are the results of MicroVec (a commercial PIV software), LRAFT, and LRAFT-ST.
+This is an example result in the case of 'PIV_4B', from left to right are the results of HS (a classical optical flow approach), LRAFT, and LRAFT-ST.
 
-![PIV_4_B-MicroVec.gif](res%2FPIV_4_B-MicroVec.gif)![PIV_4_B-LRAFT.gif](res%2FPIV_4_B-LRAFT.gif)![PIV_4_B-LRAFT-st.gif.gif](res%2FPIV_4_B-LRAFT-st.gif.gif)
+![PIV_4_B-HS.gif](res%2FPIV_4_B-HS.gif)![PIV_4_B-LRAFT.gif](res%2FPIV_4_B-LRAFT.gif)![PIV_4_B-LRAFT-st.gif](res%2FPIV_4_B-LRAFT-st.gif)
 
 
 ## Training
