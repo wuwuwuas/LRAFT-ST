@@ -75,5 +75,5 @@ This is an example result in the case of 'PIV_4B', from left to right are the re
 ## Training
 You can train a new LRAFT-ST model from scratch using the following command. It trains a model for 50 epochs using the Dataset 1 training and validation dataset with a batch size of 6:
 ```Shell
-python train.py --gpu 0 --arch LRAFT-ST --name LRAFT-ST_newModel_Dataset_1 --channel_threshold True --kd True --input_teacher "./precomputed_ckpts/RAFT_4-ST-Dataset1/ckpt.tar" --batch_size 6 --epochs 50 --iters 12 --l2 True --l2_factor 0.0001 --ls True --ls_factor 0.1 --lf True --lf_factor 0.0001 --dataset dataset1 --recover False 
+python train.py --gpu 0 --arch LRAFT-ST --name LRAFT-ST_newModel_Dataset_1 --channel_threshold True --kd True --input_teacher ./precomputed_ckpts/RAFT_4-ST-Dataset1/ckpt.tar --batch_size 6 --epochs 50 --iters 12 --l2 True --l2_factor 0.0001 --ls True --ls_factor 0.1 --lf True --lf_factor 0.0001 --dataset dataset1 --recover False 
 ```
