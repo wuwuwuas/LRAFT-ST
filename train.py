@@ -76,7 +76,7 @@ def main():
     parser.add_argument('--amp', type=eval, default=False,
                         help='Wether to use auto mixed precision')
     parser.add_argument('-a', '--arch', type=str, default='LRAFT-ST',
-                        choices=['LightPIVNet', 'RAFT', 'RAFT_4', 'RAFT_4-ST', 'LRAFT', 'LRAFT-ST'],
+                        choices=['RAFT_4', 'RAFT_4-ST', 'LRAFT', 'LRAFT-ST'],
                         help='Type of architecture to use')
     parser.add_argument('--batch_size', default=6, type=int)
     parser.add_argument('--epochs', default=10000, type=int)
@@ -142,16 +142,6 @@ def train(args):
         print('Selected model: LRAFT - -', args.arch, '  Channel threshold- -',args.channel_threshold,
               '  knowledge distillation- -', args.kd, '  Soft loss', args.ls,'  Feature loss', args.lf)
         
-    elif args.arch == 'RAFT':
-        module_name = 'RAFT.flowNetsRAFT256'
-        model_name = 'RAFT256'
-        loss_name = 'sequence_loss'
-        module = importlib.import_module(module_name)
-        RAFT256 = getattr(module, model_name)
-        sequence_loss = getattr(module, loss_name)
-        model = RAFT256(args)
-        print('Selected model: RAFT - -', args.arch)
-        
     elif args.arch == 'RAFT_4' or args.arch == 'RAFT_4-ST':
         module_name = 'RAFT_4-ST.flowNetsRAFT256'
         model_name = 'RAFT256'
@@ -161,16 +151,7 @@ def train(args):
         sequence_loss = getattr(module, loss_name)
         model = RAFT256(args)
         print('Selected model: RAFT 1/4 resolution- -', args.arch, '  Channel threshold- -',args.channel_threshold)
-        
-    elif args.arch == 'LightPIVNet':
-        module_name = 'LightPIVNet.raft'
-        model_name = 'LightPIVNet'
-        loss_name = 'sequence_loss'
-        module = importlib.import_module(module_name)
-        LightPIVNet = getattr(module, model_name)
-        sequence_loss = getattr(module, loss_name)
-        model = LightPIVNet(args)
-        print('Selected model: LightPIVNet - -', args.arch)
+
     else:
         raise ValueError('Selected model not supported: ', args.arch)
 
