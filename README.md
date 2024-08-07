@@ -31,14 +31,8 @@ pip install pillow
 Pretrained models can be found in [Model](https://drive.google.com/drive/folders/1ecU_EHwZI3_cBXVXnpwOgTYineaQa1uq?usp=sharing). Several pretrained models are available:
 * LRAFT-ST_KD_Lh_Ls_Lf-Dataset1 (student model): LRAFT-ST model pretrained on the training dataset 1 with knowledge distillation (hard loss, soft loss, and feature loss)
 * LRAFT-ST_KD_Lh_Ls_Lf-Dataset2 (student model): LRAFT-ST model pretrained on the training dataset 2 with knowledge distillation (hard loss, soft loss, and feature loss)
-* LRAFT-ST_KD_Lh-Dataset1: LRAFT-ST model pretrained on the training dataset 1 with hard loss
-* LRAFT-ST_KD_Lh-Dataset2: LRAFT-ST model pretrained on the training dataset 2 with hard loss
 * RAFT_4-ST-Dataset1 (teacher model): RAFT (1/4 resolution) with channel threshold model pretrained on the training dataset 1 with hard loss
 * RAFT_4-ST-Dataset2 (teacher model): RAFT (1/4 resolution) with channel threshold model pretrained on the training dataset 2 with hard loss
-* LRAFT_KD_Lh_Ls_Lf-Dataset1 (student model): LRAFT model pretrained on the training dataset 1 with knowledge distillation (hard loss, soft loss, and feature loss)
-* LRAFT_KD_Lh_Ls_Lf-Dataset2 (student model): LRAFT model pretrained on the training dataset 2 with knowledge distillation (hard loss, soft loss, and feature loss)
-* RAFT_4-Dataset1 (teacher model): RAFT (1/4 resolution) model pretrained on the training dataset 1 with hard loss
-* RAFT_4-Dataset2 (teacher model): RAFT (1/4 resolution) model pretrained on the training dataset 2 with hard loss
 * The pre-trained model of PIV-RAFT can be found in [PIV-RAFT](https://codeocean.com/capsule/7226151/tree/v1).
 
 You can download these pre-trained models and place them in the folder `./precomputed_ckpts/`.
