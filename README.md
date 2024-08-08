@@ -49,9 +49,9 @@ Several synthetic and experimental measurement test cases are provided:
 
 ## Evaluation
 
-To evaluate a pretrained LRAFT-ST model use `evaluate.py`. The following command shows an example for the 'cylinder' test case using a model pretrained on Problem Class 1:
+To evaluate a pretrained LRAFT-ST model use `evaluate.py`. The following command shows an example for the 'dataset1' test case using a model pretrained on Problem Class 1:
 ```Shell
-python evaluate.py  --gpu 0 --arch LRAFT-ST --channel_threshold True --iters 12 --input_path_ckpt ./precomputed_ckpts/LRAFT-ST_KD_Lh_Ls_Lf-Dataset1/ckpt.tar --test 1 --test_dataset cylinder --split_size 5
+python evaluate.py  --gpu 0 --arch LRAFT-ST --channel_threshold True --iters 12 --input_path_ckpt ./precomputed_ckpts/LRAFT-ST_KD_Lh_Ls_Lf-Dataset1/ckpt.tar --test 1 --test_dataset dataset1
 ```
 The following command shows an example for the 'PIV_4B' test case using a model pretrained on Problem Class 2:
 ```Shell
