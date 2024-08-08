@@ -43,12 +43,8 @@ To train LRAFT-ST, you will need to download the required datasets. Minimal trai
 * [Dataset 2](https://zenodo.org/record/4432496#.YMmLT6gzZaQ)
 
 Several synthetic and experimental measurement test cases are provided:
-* Uniform flow ('uniform')
-* Backward facing step ('backstep')
-* Flow past a cylinder ('cylinder')
-* Direct numerical simulation of a turbulent channel flow ('jhtdb_channel')
-* Direct numerical simulation of isotropic turbulence ('dns_turb')
-* Simulations of a sea surface flow ('sqg')
+* Test data for Dataset1 
+* Test data for Dataset2 
 * Flow over periodic hills ('PIV_4B'). This is a series of experimental images, and you can download it from [PIV_4B](http://www.pivchallenge.org/pivchallenge4.html#case_b).
 
 ## Evaluation
